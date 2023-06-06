@@ -9,7 +9,7 @@ export * from './components/Text'
 export * from './components/Triangle'
 
 /**
- * todo: 
+ * todo:
  * - select box
  * - checkbox
  * - multi select

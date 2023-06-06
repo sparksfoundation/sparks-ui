@@ -50,6 +50,7 @@
     "chroma-js": "^2.4.2",
     "clsx": "^1.2.1",
     "react-hook-form": "^7.43.9",
+    "react-tooltip": "^5.13.1",
     "tailwind-merge": "^1.12.0"
   }
 }
