@@ -20,14 +20,16 @@ const Text = ({ children, ...props }: TextProps) => (
 const meta: Meta = {
   title: "Components/Text",
   component: Text,
-  argTypes: {},
+  argTypes: {
+    color: { options: ['default', 'primary', 'secondary', 'warning', 'danger', 'success'], control: { type: 'select' } },
+  },
 };
 
 export default meta;
 
-
 export const TextStory: Story = {
   args: {
-    children: 'Text'
+    children: 'Text',
+    color: 'default'
   },
 };

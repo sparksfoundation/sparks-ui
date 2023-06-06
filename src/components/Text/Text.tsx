@@ -15,17 +15,16 @@ const tags = {
 
 const variants = {
     default: 'text-fg-800 dark:text-fg-200',
-    primary: 'text-primary-800 dark:text-primary-200',
-    secondary: 'text-secondary-800 dark:text-secondary-200',
-    warning: 'text-warning-800 dark:text-warning-200',
-    danger: 'text-danger-800 dark:text-danger-200',
-    success: 'text-success-800 dark:text-success-200',
+    primary: 'text-primary-800 dark:text-primary-700',
+    secondary: 'text-secondary-800 dark:text-secondary-700',
+    warning: 'text-warning-800 dark:text-warning-700',
+    danger: 'text-danger-800 dark:text-danger-700',
+    success: 'text-success-800 dark:text-success-700',
 }
 
 export type TextProps = {
     color?: 'default' | 'primary' | 'secondary' | 'warning' | 'danger' | 'success';
 } & H1Props & H2Props & H3Props & H4Props & H5Props & H6Props & H6Props & PreProps
-
 
 export const H1 = ({ className = '', children, color = 'default', ...props }: TextProps) => (
     <h1 className={clsxm(tags.h1, variants[color], className)} {...props}>{children}</h1>
