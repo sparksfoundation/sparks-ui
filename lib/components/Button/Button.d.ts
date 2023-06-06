@@ -1,4 +1,4 @@
-/// <reference types="react" />
+import React from "react";
 import { ButtonProps } from "react-html-props";
 type ButtonExtendedProps = {
     size?: 'sm' | 'md' | 'lg';
@@ -6,5 +6,5 @@ type ButtonExtendedProps = {
     fullWidth?: boolean;
     disabled?: boolean;
 } & ButtonProps;
-export declare const Button: (props: ButtonExtendedProps) => JSX.Element;
+export declare const Button: (props: ButtonExtendedProps) => React.JSX.Element;
 export {};

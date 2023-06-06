@@ -1,4 +1,4 @@
-/// <reference types="react" />
+import React from "react";
 import { UseFormRegisterReturn } from "react-hook-form";
 import { InputProps } from "react-html-props";
 type InputExtendedProps = {
@@ -10,5 +10,5 @@ type InputExtendedProps = {
     disabled?: boolean;
     className?: string;
 } & InputProps;
-export declare const Input: (props: InputExtendedProps) => JSX.Element;
+export declare const Input: (props: InputExtendedProps) => React.JSX.Element;
 export {};
