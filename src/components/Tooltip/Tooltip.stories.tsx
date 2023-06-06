@@ -6,10 +6,7 @@ import { Button } from "../Button";
 const meta: Meta = {
   title: "Components/Tooltip",
   component: TooltipComponent,
-  argTypes: {
-    toolTip: { name: 'toolTip', type: { name: 'string' }, defaultValue: "something" }, control: { type: 'string' },
-    tooltipContent: { name: 'toolTip', type: { name: 'string' }, defaultValue: "something" }, control: { type: 'string' },
-  }
+  argTypes: {}
 };
 
 export default meta;

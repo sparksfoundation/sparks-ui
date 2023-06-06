@@ -1,5 +1,5 @@
 import React from 'react';
-// import { clsxm } from "../../common/clsxm";
+import { clsxm } from "../../common/clsxm";
 import { DivProps } from 'react-html-props'
 import { Tooltip as ReactTooltip } from 'react-tooltip'
 
@@ -12,7 +12,6 @@ type TooltipProps = {
 
 export const Tooltip = (props: TooltipProps) => {
   const {
-    // children,
     TooltipComponent,
     className = '',
     place = 'bottom',
@@ -23,8 +22,8 @@ export const Tooltip = (props: TooltipProps) => {
 
   return (
     <>
-      <TooltipComponent data-tooltip-id={tooltipId} data-tooltip-content={tooltipContent} />
-      <ReactTooltip id={tooltipId} className={className} place={place} />
+      <TooltipComponent data-tooltip-id={tooltipId} data-tooltip-content={tooltipContent}>text</TooltipComponent>
+      <ReactTooltip id={tooltipId} className={clsxm("max-w-[25%]", className)} place={place} />
     </>
   )
 }
