@@ -1,39 +1,41 @@
 import React, { ChangeEventHandler } from 'react';
-import { FieldValues, UseFormSetValue } from 'react-hook-form';
 import { clsxm } from "../../../common/clsxm";
+import { InputProps } from "react-html-props";
+import { UseFormRegisterReturn } from 'react-hook-form';
 
 type RadioButtonProps =  {
   id: string;
+  key?: string;
   label: string;
-  value: string;
-  checked: boolean;
-  onChange: ChangeEventHandler<HTMLInputElement>;
-  setValue?: UseFormSetValue<FieldValues>;
-  name?: string;
-}
+  className: string;
+  disabled: boolean;
+  registration?: Partial<UseFormRegisterReturn>;
+} & InputProps
 
 export const RadioButton = (props: RadioButtonProps) => {
   const {
     id,
     label,
-    value,
-    checked,
-    onChange,
-    setValue,
-    name,
+    registration,
+    disabled = false,
+    key = null,
+    className = ""
   } = props;
 
   return (
-    <div className="flex items-center cursor-pointer">
+    <div key={key} className="flex items-center gap-1.5 cursor-pointer">
       <input
         type="radio"
-        className={clsxm("text-fg-800 dark:text-fg-200 m-2")}
+        className={clsxm(
+          "focus:bg-primary-500 focus:ring-primary-500 checked:bg-primary-500",
+          "hover:bg-primary-500 active:bg-primary-500 accent-primary-500",
+          className
+        )}
         id={id}
-        value={value}
-        checked={checked}
-        onChange={() => {}}
+        disabled={disabled}
+        {...registration}
       />
-      <label htmlFor={id}>{label}</label>
+      <label className={clsxm("text-fg-800 dark:text-fg-200")} htmlFor={id}>{label}</label>
     </div>
   );
 };

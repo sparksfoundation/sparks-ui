@@ -14,7 +14,7 @@ export default meta;
 type Story = StoryObj<typeof TooltipComponent>;
 export const TooltipStory: Story = {
   args: {
-    TooltipComponent: Button,
+    children: <Button>Hover over me!</Button>,
     tooltipId: 'tooltip-id',
     tooltipContent: 'Hello world',
   },

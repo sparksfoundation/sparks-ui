@@ -10,4 +10,9 @@ const meta: Meta = {
 export default meta;
 
 type Story = StoryObj<typeof CheckboxComponent>;
-export const CheckboxStory: Story = {};
+export const CheckboxStory: Story = {
+  args: {
+    id: 'checkbox1',
+    label: 'Checkbox label',
+  }
+};

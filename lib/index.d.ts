@@ -1,8 +1,8 @@
 /// <reference types="react" />
 import { ClassValue } from 'clsx';
-import { ButtonProps, DivProps, SVGProps, InputProps, LabelProps, H1Props, H2Props, H3Props, H4Props, H5Props, H6Props, PreProps } from 'react-html-props';
-import { ReactNode, ChangeEventHandler } from 'react';
-import { UseFormRegisterReturn, UseFormSetValue, FieldValues } from 'react-hook-form';
+import { ButtonProps, DivProps, SVGProps, InputProps, LabelProps, TextAreaProps, H1Props, H2Props, H3Props, H4Props, H5Props, H6Props, PreProps } from 'react-html-props';
+import { ReactNode } from 'react';
+import { UseFormRegisterReturn } from 'react-hook-form';
 
 declare const clsxm: (...classes: ClassValue[]) => string;
 
@@ -112,9 +112,12 @@ type SVGExtendedProps = {
 declare const Logo: ({ size, mode, className }: SVGExtendedProps) => JSX.Element;
 
 type CheckboxExtendedProps = {
-    registration?: Partial<UseFormRegisterReturn>;
-    disabled?: boolean;
+    id: string;
+    key?: string;
+    label: string;
     className?: string;
+    disabled?: boolean;
+    registration?: Partial<UseFormRegisterReturn>;
 } & InputProps;
 declare const Checkbox: (props: CheckboxExtendedProps) => JSX.Element;
 
@@ -142,15 +145,21 @@ type LabelExtendedProps = {
 } & LabelProps;
 declare const Label: ({ id, children, className, ...props }: LabelExtendedProps) => JSX.Element;
 
+type TextareaExtendedProps = {
+    registration?: Partial<UseFormRegisterReturn>;
+    disabled?: boolean;
+    className?: string;
+} & TextAreaProps;
+declare const Textarea: (props: TextareaExtendedProps) => JSX.Element;
+
 type RadioButtonProps = {
     id: string;
+    key?: string;
     label: string;
-    value: string;
-    checked: boolean;
-    onChange: ChangeEventHandler<HTMLInputElement>;
-    setValue?: UseFormSetValue<FieldValues>;
-    name?: string;
-};
+    className: string;
+    disabled: boolean;
+    registration?: Partial<UseFormRegisterReturn>;
+} & InputProps;
 declare const RadioButton: (props: RadioButtonProps) => JSX.Element;
 
 type NoiseBackgroundProps = {
@@ -175,4 +184,4 @@ type TriangleProps = {
 } & DivProps;
 declare const Triangle: ({ className, solid }: TriangleProps) => JSX.Element;
 
-export { Button, Card, CardProps, Checkbox, Error, H1, H2, H3, H4, H5, H6, Input, Label, Logo, NoiseBackground, P, Pre, RadioButton, SVGExtendedProps, TextProps, Triangle, clsxm, getTheme, safelist };
+export { Button, Card, CardProps, Checkbox, Error, H1, H2, H3, H4, H5, H6, Input, Label, Logo, NoiseBackground, P, Pre, RadioButton, SVGExtendedProps, TextProps, Textarea, Triangle, clsxm, getTheme, safelist };

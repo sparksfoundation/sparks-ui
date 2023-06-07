@@ -11,10 +11,6 @@ export * from './components/Triangle'
 /**
  * todo:
  * - select box
- * - checkbox
  * - multi select
- * - radio
- * - textarea
  * - dropdown
- * - tooltip
  */

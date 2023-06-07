@@ -1,13 +1,13 @@
-import { ChangeEventHandler } from 'react';
-import { FieldValues, UseFormSetValue } from 'react-hook-form';
+/// <reference types="react" />
+import { InputProps } from "react-html-props";
+import { UseFormRegisterReturn } from 'react-hook-form';
 type RadioButtonProps = {
     id: string;
+    key?: string;
     label: string;
-    value: string;
-    checked: boolean;
-    onChange: ChangeEventHandler<HTMLInputElement>;
-    setValue?: UseFormSetValue<FieldValues>;
-    name?: string;
-};
+    className: string;
+    disabled: boolean;
+    registration?: Partial<UseFormRegisterReturn>;
+} & InputProps;
 export declare const RadioButton: (props: RadioButtonProps) => JSX.Element;
 export {};

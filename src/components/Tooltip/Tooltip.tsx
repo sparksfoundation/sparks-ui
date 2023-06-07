@@ -5,14 +5,14 @@ import { Tooltip as ReactTooltip } from 'react-tooltip'
 
 type TooltipProps = {
   place?: 'top' | 'right' | 'bottom' | 'left';
-  TooltipComponent: any;
+  children: React.ReactElement;
   tooltipId: string;
   tooltipContent: string;
 } & DivProps
 
 export const Tooltip = (props: TooltipProps) => {
   const {
-    TooltipComponent,
+    children: tooltipTargetElement,
     className = '',
     place = 'bottom',
     tooltipContent,
@@ -22,7 +22,12 @@ export const Tooltip = (props: TooltipProps) => {
 
   return (
     <>
-      <TooltipComponent data-tooltip-id={tooltipId} data-tooltip-content={tooltipContent}>text</TooltipComponent>
+      {
+        React.cloneElement(tooltipTargetElement, {
+          'data-tooltip-id': tooltipId,
+          'data-tooltip-content': tooltipContent
+        })
+      }
       <ReactTooltip id={tooltipId} className={clsxm("max-w-[25%]", className)} place={place} />
     </>
   )
