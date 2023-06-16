@@ -1,4 +1,4 @@
-/// <reference types="react" />
+import React from "react";
 import { UseFormRegisterReturn } from "react-hook-form";
 import { TextAreaProps } from "react-html-props";
 type TextareaExtendedProps = {
@@ -6,5 +6,5 @@ type TextareaExtendedProps = {
     disabled?: boolean;
     className?: string;
 } & TextAreaProps;
-export declare const Textarea: (props: TextareaExtendedProps) => JSX.Element;
+export declare const Textarea: (props: TextareaExtendedProps) => React.JSX.Element;
 export {};

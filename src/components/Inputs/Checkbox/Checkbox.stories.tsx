@@ -4,15 +4,12 @@ import { Checkbox as CheckboxComponent } from "./Checkbox";
 const meta: Meta = {
   title: "Components/Checkbox",
   component: CheckboxComponent,
-  argTypes: {}
+  argTypes: {},
 };
 
 export default meta;
 
 type Story = StoryObj<typeof CheckboxComponent>;
 export const CheckboxStory: Story = {
-  args: {
-    id: 'checkbox1',
-    label: 'Checkbox label',
-  }
+  args: { id: "checkbox1" },
 };
