@@ -2,7 +2,7 @@ import React from 'react';
 import { DivProps } from 'react-html-props';
 type TooltipProps = {
     place?: 'top' | 'right' | 'bottom' | 'left';
-    TooltipComponent: any;
+    children: React.ReactElement;
     tooltipId: string;
     tooltipContent: string;
 } & DivProps;

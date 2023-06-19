@@ -1,6 +1,6 @@
 import { ClassValue } from 'clsx';
 import React, { ReactNode } from 'react';
-import { ButtonProps, DivProps, SVGProps, InputProps, LabelProps, H1Props, H2Props, H3Props, H4Props, H5Props, H6Props, PreProps } from 'react-html-props';
+import { ButtonProps, DivProps, SVGProps, InputProps, LabelProps, TextAreaProps, H1Props, H2Props, H3Props, H4Props, H5Props, H6Props, PreProps } from 'react-html-props';
 import { UseFormRegisterReturn } from 'react-hook-form';
 
 declare const clsxm: (...classes: ClassValue[]) => string;
@@ -110,6 +110,14 @@ type SVGExtendedProps = {
 } & SVGProps;
 declare const Logo: ({ size, mode, className }: SVGExtendedProps) => React.JSX.Element;
 
+type CheckboxExtendedProps = {
+    id: string;
+    className?: string;
+    disabled?: boolean;
+    registration?: Partial<UseFormRegisterReturn>;
+} & InputProps;
+declare const Checkbox: (props: CheckboxExtendedProps) => React.JSX.Element;
+
 type ErrorExtendedProps = {
     children?: string;
     className?: string;
@@ -134,6 +142,30 @@ type LabelExtendedProps = {
 } & LabelProps;
 declare const Label: ({ id, children, className, ...props }: LabelExtendedProps) => React.JSX.Element;
 
+type TextareaExtendedProps = {
+    registration?: Partial<UseFormRegisterReturn>;
+    disabled?: boolean;
+    className?: string;
+} & TextAreaProps;
+declare const Textarea: (props: TextareaExtendedProps) => React.JSX.Element;
+
+type RadioButtonProps = {
+    id: string;
+    key?: string;
+    className: string;
+    disabled: boolean;
+    registration?: Partial<UseFormRegisterReturn>;
+} & InputProps;
+declare const RadioButton: (props: RadioButtonProps) => React.JSX.Element;
+
+type ModalProps = {
+    isOpen: boolean;
+    closeModal: () => void;
+    heading: string;
+    children: React.ReactNode;
+};
+declare const Modal: ({ isOpen, closeModal, heading, children, }: ModalProps) => React.JSX.Element;
+
 type NoiseBackgroundProps = {
     shade?: 'light' | 'medium' | 'dark';
 } & DivProps;
@@ -156,4 +188,4 @@ type TriangleProps = {
 } & DivProps;
 declare const Triangle: ({ className, solid }: TriangleProps) => React.JSX.Element;
 
-export { Button, Card, CardProps, Error, H1, H2, H3, H4, H5, H6, Input, Label, Logo, NoiseBackground, P, Pre, SVGExtendedProps, TextProps, Triangle, clsxm, getTheme, safelist };
+export { Button, Card, CardProps, Checkbox, Error, H1, H2, H3, H4, H5, H6, Input, Label, Logo, Modal, ModalProps, NoiseBackground, P, Pre, RadioButton, SVGExtendedProps, TextProps, Textarea, Triangle, clsxm, getTheme, safelist };
