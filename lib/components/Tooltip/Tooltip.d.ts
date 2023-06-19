@@ -6,5 +6,5 @@ type TooltipProps = {
     tooltipId: string;
     tooltipContent: string;
 } & DivProps;
-export declare const Tooltip: (props: TooltipProps) => React.JSX.Element;
+export declare const Tooltip: (props: TooltipProps) => JSX.Element;
 export {};

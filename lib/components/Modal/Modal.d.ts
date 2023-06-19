@@ -5,4 +5,4 @@ export type ModalProps = {
     heading: string;
     children: React.ReactNode;
 };
-export declare const Modal: ({ isOpen, closeModal, heading, children, }: ModalProps) => React.JSX.Element;
+export declare const Modal: ({ isOpen, closeModal, heading, children, }: ModalProps) => JSX.Element;
