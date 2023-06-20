@@ -189,4 +189,12 @@ type TriangleProps = {
 } & DivProps;
 declare const Triangle: ({ className, solid }: TriangleProps) => JSX.Element;
 
-export { Button, Card, CardProps, Checkbox, Error, H1, H2, H3, H4, H5, H6, Input, Label, Logo, Modal, ModalProps, NoiseBackground, P, Pre, RadioButton, SVGExtendedProps, TextProps, Textarea, Triangle, clsxm, getTheme, safelist };
+type TooltipProps = {
+    place?: 'top' | 'right' | 'bottom' | 'left';
+    children: React.ReactElement;
+    tooltipId: string;
+    tooltipContent: string;
+} & DivProps;
+declare const Tooltip: (props: TooltipProps) => JSX.Element;
+
+export { Button, Card, CardProps, Checkbox, Error, H1, H2, H3, H4, H5, H6, Input, Label, Logo, Modal, ModalProps, NoiseBackground, P, Pre, RadioButton, SVGExtendedProps, TextProps, Textarea, Tooltip, Triangle, clsxm, getTheme, safelist };
