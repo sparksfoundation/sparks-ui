@@ -1,4 +1,4 @@
-import React from "react";
+/// <reference types="react" />
 import { InputProps } from "react-html-props";
 import { UseFormRegisterReturn } from "react-hook-form";
 type RadioButtonProps = {
@@ -8,5 +8,5 @@ type RadioButtonProps = {
     disabled: boolean;
     registration?: Partial<UseFormRegisterReturn>;
 } & InputProps;
-export declare const RadioButton: (props: RadioButtonProps) => React.JSX.Element;
+export declare const RadioButton: (props: RadioButtonProps) => JSX.Element;
 export {};

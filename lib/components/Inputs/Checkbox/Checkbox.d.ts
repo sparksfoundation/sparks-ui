@@ -1,4 +1,4 @@
-import React from "react";
+/// <reference types="react" />
 import { UseFormRegisterReturn } from "react-hook-form";
 import { InputProps } from "react-html-props";
 type CheckboxExtendedProps = {
@@ -7,5 +7,5 @@ type CheckboxExtendedProps = {
     disabled?: boolean;
     registration?: Partial<UseFormRegisterReturn>;
 } & InputProps;
-export declare const Checkbox: (props: CheckboxExtendedProps) => React.JSX.Element;
+export declare const Checkbox: (props: CheckboxExtendedProps) => JSX.Element;
 export {};

@@ -23,7 +23,7 @@ export const Card = ({ shade = 'medium', children, className = '', ...props }: C
             {...props}
         >
             <NoiseBackground shade={shade} />
-            <div className="relative">{children}</div>
+            <div className="relative h-full w-full">{children}</div>
         </div>
     )
 }
