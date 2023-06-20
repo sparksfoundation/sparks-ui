@@ -8,6 +8,7 @@ export * from "./components/Modal";
 export * from "./components/NoiseBackground";
 export * from "./components/Text";
 export * from "./components/Triangle";
+export * from "./components/Tooltip";
 
 /**
  * todo:
