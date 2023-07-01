@@ -123,7 +123,7 @@ type ErrorExtendedProps = {
     children?: string;
     className?: string;
 } & DivProps;
-declare const Error: ({ children, className, ...props }: ErrorExtendedProps) => JSX.Element;
+declare const ErrorMsg: (props: ErrorExtendedProps) => JSX.Element;
 
 type InputExtendedProps = {
     type?: 'text' | 'email' | 'password' | 'hidden';
@@ -141,7 +141,7 @@ type LabelExtendedProps = {
     children: string;
     className?: string;
 } & LabelProps;
-declare const Label: ({ id, children, className, ...props }: LabelExtendedProps) => JSX.Element;
+declare const Label: (props: LabelExtendedProps) => JSX.Element;
 
 type TextareaExtendedProps = {
     registration?: Partial<UseFormRegisterReturn>;
@@ -197,4 +197,4 @@ type TooltipProps = {
 } & DivProps;
 declare const Tooltip: (props: TooltipProps) => JSX.Element;
 
-export { Button, Card, CardProps, Checkbox, Error, H1, H2, H3, H4, H5, H6, Input, Label, Logo, Modal, ModalProps, NoiseBackground, P, Pre, RadioButton, SVGExtendedProps, TextProps, Textarea, Tooltip, Triangle, clsxm, getTheme, safelist };
+export { Button, Card, CardProps, Checkbox, ErrorMsg, H1, H2, H3, H4, H5, H6, Input, Label, Logo, Modal, ModalProps, NoiseBackground, P, Pre, RadioButton, SVGExtendedProps, TextProps, Textarea, Tooltip, Triangle, clsxm, getTheme, safelist };

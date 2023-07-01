@@ -5,5 +5,5 @@ type LabelExtendedProps = {
     children: string;
     className?: string;
 } & LabelProps;
-export declare const Label: ({ id, children, className, ...props }: LabelExtendedProps) => JSX.Element;
+export declare const Label: (props: LabelExtendedProps) => JSX.Element;
 export {};

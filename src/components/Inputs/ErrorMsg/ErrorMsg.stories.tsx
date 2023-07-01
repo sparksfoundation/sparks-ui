@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Error as ErrorComponent } from "./Error";
+import { ErrorMsg as ErrorComponent } from "./ErrorMsg";
 
 // Default metadata of the story https://storybook.js.org/docs/react/api/csf#default-export
 const meta: Meta<typeof ErrorComponent> = {

@@ -4,5 +4,5 @@ type ErrorExtendedProps = {
     children?: string;
     className?: string;
 } & DivProps;
-export declare const Error: ({ children, className, ...props }: ErrorExtendedProps) => JSX.Element;
+export declare const ErrorMsg: (props: ErrorExtendedProps) => JSX.Element;
 export {};
