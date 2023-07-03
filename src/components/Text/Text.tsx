@@ -5,7 +5,7 @@ import { H1Props, H2Props, H3Props, H4Props, H5Props, H6Props, PreProps } from "
 const tags = {
     h1: 'text-4xl sm:text-5xl font-semibold',
     h2: 'text-3xl sm:text-4xl font-semibold',
-    h3: 'text-1xl sm:text-2xl font-semibold',
+    h3: 'text-xl sm:text-2xl font-semibold',
     h4: 'text-lg sm:text-xl font-semibold',
     h5: 'text-md sm:text-lg font-semibold',
     h6: 'text-base font-semibold',

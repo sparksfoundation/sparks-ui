@@ -15,7 +15,7 @@ export function getTheme({ defaultTheme, defaultColors }: { defaultTheme: any, d
     return {
         extend: {
             animation: {
-              'fade-in': 'fadeIn 500ms linear',
+              'fade-in': 'fadeIn 200ms linear',
             },
             keyframes: {
               fadeIn: {
